@@ -1,0 +1,540 @@
+@font-face {
+    font-family: Cute;
+    src: url('fonts/CuteFont-Regular.otf');
+  }
+
+body { 
+    margin: 0; 
+    padding: 0;
+    position: relative;
+    font-family: 'Arial', sans-serif; 
+    overflow-x: hidden;
+    
+}
+
+
+
+  /* Sprinkle styles */
+  .sprinkle {
+    position: absolute;
+    width: 15px;
+    height: 2px;
+    background-color: currentColor;
+    border-radius: 5px;
+    z-index: 1;
+  }
+  
+  /* Define various colors for sprinkles */
+  .sprinkle-color-1 { color: #FFC0CB; } /* Pink */
+  .sprinkle-color-2 { color: #FFD700; } /* Gold */
+  .sprinkle-color-3 { color: #8A2BE2; } /* BlueViolet */
+  .sprinkle-color-4 { color: #00fff2; } /* Lime */
+  .sprinkle-color-5 { color: #FFA500; } /* Orange */
+  /* Add more colors as desired */
+
+
+  .navbar {
+    overflow: hidden;
+    background-color: #fffff0; /* pastel color */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Lato', sans-serif;
+    border-bottom: 5px solid rgb(243, 209, 197);
+  }
+  
+  .navbar img {
+    height: 100px; /* Adjust the size as needed */
+    padding-right: 20px;
+  }
+  
+  .navbar-links {
+    display: flex;
+    justify-content: flex-end; /* Aligns links to the right */
+    align-items: center;
+    flex-grow: 1; /* Allows the links to take up available space on the right */
+  }
+  
+  .navbar-links a {
+    color: rgb(243, 209, 197); /* darker shade for contrast */
+    text-decoration: none;
+    padding: 15px 20px;
+    font-size: 1.25em;
+    font-weight: bold;
+    margin: 0 10px; /* Adds margin between links */
+  }
+  
+  .navbar-links a:hover {
+    background: #ce93d8; /* lighter shade for hover effect */
+    border-radius: 10px;
+    color: white;
+  }
+  
+  .navbar-cta {
+    display: flex;
+    align-items: center;
+    margin-right: auto; /* Pushes the CTA and socials to the left */
+  }
+  
+  .navbar-cta .order-button {
+    font-family: 'Lato', sans-serif;
+    background-color: rgb(243, 209, 197); /* Button color */
+    color: white;
+    padding: 1em 2em;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .navbar-cta .order-button:hover {
+    background-color: #ce93d8; /* Button hover color */
+  }
+  
+  .navbar-socials {
+    display: flex;
+    align-items: center;
+    font-size: 2em;
+    gap: 0.25em;
+  }
+  
+  .navbar-socials a {
+    color: rgb(243, 209, 197);
+    margin-left: 10px;
+    transition: color 0.3s ease;
+  }
+  
+  .navbar-socials a:hover {
+    color: #ce93d8;
+  }
+
+
+  /* Base styles */
+.navbar-burger {
+  display: none;
+  cursor: pointer;
+  color: rgb(243, 209, 197);
+}
+
+.navbar-fullscreen {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 9999; /* Sit on top */
+  right: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  background-color: rgb(243, 209, 197); /* Fallback color */
+  background-color: rgba(243, 209, 197, 1); /* Black w/ opacity */
+}
+
+.navbar-fullscreen-content {
+  position: relative;
+  top: 25%; /* 25% from the top */
+  width: 100%; /* 100% width */
+  text-align: center; /* Centered text */
+  margin-top: 30px; /* 30px top margin */
+}
+
+.navbar-fullscreen-content a {
+  padding: 10px;
+  text-decoration: none;
+  font-size: 36px; /* Large text */
+  color: white;
+  display: block; /* Full width */
+  transition: 0.3s; /* Transition for hover effect */
+}
+
+.navbar-fullscreen-content a:hover {
+  color: #ce93d8;
+}
+  
+.hero-section {
+    background-image: url('images/hero.png');
+    height: 100vh; /* This will make the hero section take the full height of the viewport */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white; /* Adjust based on your image and design */
+    border-bottom: 5px solid rgb(243, 209, 197);
+    z-index: 5;
+    position: relative;
+  }
+
+  
+  
+  .hero-text {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2em; /* Add padding to prevent text from touching the borders */
+    border-radius: 10px; /* Optional: rounds the corners of the text background */
+    z-index: 1; /* Ensures the text is above the overlay */
+    color: rgb(255, 255, 255);
+    
+  }
+  
+  .hero-text strong {
+    font-family: 'Pacifico', cursive;
+    font-size: calc(20px + 10vh);
+    line-height: calc(20px + 10vh);
+  /*   text-shadow: 0 0 5px #f562ff, 0 0 15px #f562ff, 0 0 25px #f562ff,
+      0 0 20px #f562ff, 0 0 30px #890092, 0 0 80px #890092, 0 0 80px #890092;
+    color: #fccaff; */
+    text-shadow: 0 0 5px rgb(243, 209, 197), 0 0 15px rgb(243, 209, 197), 0 0 20px rgb(243, 209, 197), 0 0 40px rgb(243, 209, 197), 0 0 60px rgb(243, 209, 197), 0 0 10px rgb(243, 209, 197), 0 0 98px #ff0000;
+      color: #fff6a9;
+    text-align: center;
+    animation: blink 12s infinite;
+    -webkit-animation: blink 12s infinite;
+  }
+  
+  @-webkit-keyframes blink {
+    20%,
+    24%,
+    55% {
+      color: #111;
+      text-shadow: none;
+    }
+  
+    0%,
+    19%,
+    21%,
+    23%,
+    25%,
+    54%,
+    56%,
+    100% {
+  /*     color: #fccaff;
+      text-shadow: 0 0 5px #f562ff, 0 0 15px #f562ff, 0 0 25px #f562ff,
+        0 0 20px #f562ff, 0 0 30px #890092, 0 0 80px #890092, 0 0 80px #890092; */
+    text-shadow: 0 0 5px rgb(243, 209, 197), 0 0 15px rgb(243, 209, 197), 0 0 20px rgb(243, 209, 197), 0 0 40px rgb(243, 209, 197), 0 0 60px rgb(243, 209, 197), 0 0 10px rgb(243, 209, 197), 0 0 98px rgb(243, 209, 197);
+      color: #fff6a9;
+    }
+  }
+  
+  @keyframes blink {
+    20%,
+    24%,
+    55% {
+      color: #111;
+      text-shadow: none;
+    }
+  
+    0%,
+    19%,
+    21%,
+    23%,
+    25%,
+    54%,
+    56%,
+    100% {
+  /*     color: #fccaff;
+      text-shadow: 0 0 5px #f562ff, 0 0 15px #f562ff, 0 0 25px #f562ff,
+        0 0 20px #f562ff, 0 0 30px #890092, 0 0 80px #890092, 0 0 80px #890092; */
+        text-shadow: 0 0 5px rgb(243, 209, 197), 0 0 15px rgb(243, 209, 197), 0 0 20px rgb(243, 209, 197), 0 0 40px rgb(243, 209, 197), 0 0 60px rgb(243, 209, 197), 0 0 10px rgb(243, 209, 197), 0 0 98px rgb(243, 209, 197);
+      color: #fff6a9;
+    }
+  }
+  
+  .hero-text p {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.5rem; /* Adjust the size as needed */
+    margin-bottom: 2em;
+  }
+  
+  .hero-button {
+    font-family: 'Lato', sans-serif;
+    background-color: rgb(243, 209, 197); /* Button color */
+    color: white;
+    padding: 1em 2em;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .hero-button:hover {
+    background-color: #ce93d8; /* Button hover color */
+  }
+  
+
+  .intro-gallery {
+    text-align: center;
+    padding: 50px 20px; /* Adjust padding as needed */
+    background-color: rgb(247, 237, 253); /* Light pastel background for a soft transition */
+  }
+  
+  .intro-gallery h2 {
+    font-family: 'Pacifico', cursive;
+    font-size: 3em;
+    color: #5e35b1;
+    margin-bottom: 0.5em;
+  }
+  
+  .intro-gallery p {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.5em;
+    color: #333;
+    max-width: 1000px;
+    margin: 0 auto; /* Centers the text block */
+    margin-bottom: 3em;
+  }
+  
+
+  .parallax-container {
+    width: 100%;
+    overflow-x: hidden;
+    border-top: 5px solid rgb(243, 209, 197);
+    z-index: 10;
+    position: relative;
+  }
+  
+  .parallax-item {
+    position: relative;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px; /* Adjust based on your design preference */
+    border-bottom: 5px solid rgb(243, 209, 197);
+    padding: 100px;
+  }
+  
+  .parallax-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    opacity: 1;
+    text-align: center;
+    background: rgb(255, 255, 255, 0.25); /* Semi-transparent background for text */
+    border: 5px solid rgb(243, 209, 197);
+    padding: 20px;
+    border-radius: 5px;
+  }
+  
+  .parallax-text h2 {
+    font-family: 'Pacifico', cursive;
+    margin-bottom: 0.5em;
+    color: rgb(243, 209, 197);
+    font-size: 3em;
+  }
+  
+  .parallax-text p {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.5em;
+  }
+
+
+  /* About Us Section */
+.about {
+    background-color: #e7f9ff; /* Soft background color that complements the pastel theme */
+    padding: 60px 20px;
+    text-align: center;
+    height: 100%;
+    border-bottom: 5px solid rgb(243, 209, 197);
+  }
+  
+  .about .container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  
+  .about h2 {
+    font-family: 'Pacifico', cursive;
+    font-size: 3em;
+    color: #5e35b1;
+    position: relative;
+  }
+
+  #about-us spline-viewer {
+    z-index: 20;
+    height: 250px;
+  }
+
+  .about-image {
+    height: 500px;
+    border-radius: 10px;
+    border: 5px solid rgb(243, 209, 197);
+    z-index: 15;
+    position: relative;
+  }
+  
+  .about p {
+    font-family: 'Lato', sans-serif;
+    color: #333;
+    font-size: 1.25em;
+    margin-bottom: 2em;
+    position: relative;
+    z-index: 20;
+    text-align: left;
+  }
+  
+
+
+
+  
+  
+  .menu-section {
+    background-color: #fffaf0;
+    padding: 60px 20px;
+    text-align: center;
+  }
+  
+  .menu-section .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .menu-section h2 {
+    font-family: 'Pacifico', cursive;
+    color: #5e35b1;
+    font-size: 3em;
+    margin-bottom: 1em;
+  }
+  
+  .menu-section .menu-categories {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px; /* Adds space between categories */
+  }
+  
+  .menu-section .menu-category {
+    flex-basis: calc(25% - 20px); /* Adjusts the width of the category */
+    background: #f9eae1; /* Light pastel background for each category */
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transform: rotate(-2deg); /* Tilt the category cards slightly */
+    transition: transform 0.3s ease;
+    border: 5px solid rgb(243, 209, 197);
+    overflow: hidden; /* Ensure nothing spills out of the border-radius */
+    z-index: 20;
+  }
+  
+  .menu-section .menu-category:hover {
+    transform: rotate(0deg); /* Straighten the card on hover for a playful effect */
+  }
+  
+  .menu-section .menu-category h3 {
+    font-family: 'Lato', sans-serif;
+    color: #333;
+    margin-bottom: 0.5em;
+    text-decoration: underline;
+    font-size: 1.5em;
+  }
+  
+  .menu-section .menu-items {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .menu-section .menu-item {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 10px 0;
+    position: relative;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transform: rotate(2deg); /* Counter-rotate the items to align with the category card */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-bottom: none; /* Since we're using box-shadow, we no longer need the border */
+  }
+  
+  .menu-section .menu-item:hover {
+    transform: rotate(0deg); /* Straighten the item on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  .menu-section .item-name {
+    font-weight: bold;
+    display: block; /* Makes it a block element */
+    color: #5e35b1; /* Dark pastel color for the text */
+  }
+  
+  .menu-section .item-price {
+    font-weight: bold;
+    float: right; /* Aligns price to the right */
+    clear: both; /* Fixes float */
+    color: #5e35b1;
+  }
+  
+  .menu-section .item-description {
+    font-size: 0.9em;
+    color: #666;
+    clear: both; /* Fixes float */
+    margin-top: 5px;
+  }
+
+  spline-viewer {
+    margin-top: -5em;
+    z-index: 30;
+  }
+  
+  
+
+  @media (max-width: 768px) {
+    .navbar {
+      display: flex;
+      justify-content: right;
+    }
+
+    .navbar img {
+      position: absolute;
+      left: 0;
+    }
+
+    .navbar-burger {
+      font-size: 2em;
+      padding: 1em;
+      display: flex;
+    }
+  
+    .navbar-cta, .navbar-links, .navbar-socials {
+      display: none;
+    }
+
+    .about img {
+      height: 400px;
+    }
+
+    .parallax-text h2 {
+      font-family: 'Pacifico', cursive;
+      margin-bottom: 0.5em;
+      color: rgb(243, 209, 197);
+      font-size: 2em;
+    }
+    
+    .parallax-text p {
+      font-family: 'Lato', sans-serif;
+      font-size: 1.25em;
+    }
+
+    .menu-section .menu-category {
+      flex-basis: calc(70% - 0px); /* Adjusts the width of the category */
+      background: #f9eae1; /* Light pastel background for each category */
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+      transform: rotate(-2deg); /* Tilt the category cards slightly */
+      transition: transform 0.3s ease;
+      border: 5px solid rgb(243, 209, 197);
+      overflow: hidden; /* Ensure nothing spills out of the border-radius */
+      z-index: 20;
+    }
+    
+    spline-viewer {
+      margin-top: 5em;
+      height: 50vh;
+    }
+  }

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Elizabeth Tellez Baking Restaurant</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Pacifico&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+
+
+</head>
+
+<body>
+
+  <div class="navbar">
+    <img src="images/logo.png" alt="Elizabeth Tellez Baking Restaurant Logo">
+    <!-- Full-screen overlay container -->
+    <div class="navbar-burger" onclick="toggleNavbar()">
+      <i class="fas fa-bars"></i>
+    </div>
+    <div id="navbar-fullscreen" class="navbar-fullscreen">
+      <div class="navbar-fullscreen-content">
+        <a href="#home" onclick="toggleNavbar()">Home</a>
+        <a href="#gallery" onclick="toggleNavbar()">Gallery</a>
+        <a href="#about" onclick="toggleNavbar()">About</a>
+        <a href="#menu" onclick="toggleNavbar()">Menu</a>
+        <a href="#order" class="order-button" onclick="toggleNavbar()">Order Now</a>
+      </div>
+    </div>
+    <div class="navbar-cta">
+      <a href="#order" class="order-button">Order Now</a>
+    </div>
+    <div class="navbar-socials">
+      <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+    </div>
+    <div class="navbar-links">
+      <a href="#home">Home</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#about">About</a>
+      <a href="#menu">Menu</a>
+    </div>
+  </div>
+  
+  
+
+  <div id="home" class="home-section">
+    <div class="hero-section">
+      <div class="hero-text">
+        <p><strong></br>Ellie's Baking<br></strong> Home of delicious flans, cupcakes, pies, and so many more delicious
+          treats!
+        </p>
+        <a href="#menu" class="hero-button">View Menu</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="intro-gallery">
+    <h2>Discover My Delights</h2>
+    <p>Each pastry is a piece of art, crafted with the finest ingredients and a dash of love. Scroll down to see
+      some of my finest creations!</p>
+  </div>
+  <div id="gallery" class="gallery-section">
+    <div class="parallax-container">
+      <div class="parallax-item" style="background-image: url('images/flan.png');">
+        <div class="parallax-text">
+          <h2>Classic Caramel Flan</h2>
+          <p>Buttery and smooth, fresh out of the oven every morning.</p>
+        </div>
+      </div>
+      <div class="parallax-item" style="background-image: url('images/cupcake.png');">
+        <div class="parallax-text">
+          <h2>Velvet Symphony Cupcake</h2>
+          <p>Fluffy on the outside, soft on the inside, delicious on every side.</p>
+        </div>
+      </div>
+      <div class="parallax-item" style="background-image: url('images/pie.png');">
+        <div class="parallax-text">
+          <h2>Pumpkin Spice Pie</h2>
+          <p>Crusty and soft, the perfect dessert to enjoy with the fall weather.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- About Us Section -->
+  <div id="about" class="about">
+    <div class="container">
+      <h2>My Story</h2>
+      <img src="images/ellie.png" alt="Elizabeth Tellez" class="about-image">
+      <p>I always knew I had a knack for baking. Growing up in a Mexican household, I was frequently tasked with kitchen
+        duties. That fortunately included baking! From following recipes passed down
+        through generations to crafting my own abominations (but delicious), I have mastered the art of baking. Now, I
+        want to share my passion with others and hope to inspire those that are interested in baking.
+        Remember, the sweetest hearts create the sweetest treats!
+      </p>
+    </div>
+  </div>
+
+
+  <!-- Menu Section -->
+  <div class="menu-section" id="menu">
+    <div class="container">
+      <h2>Menu</h2>
+      <div class="menu-categories">
+        <!-- Cakes Category -->
+        <div class="menu-category">
+          <h3>Cakes</h3>
+          <ul class="menu-items">
+            <li class="menu-item">
+              <span class="item-name">Velvet Symphony</span>
+              <span class="item-price">$28</span>
+              <p class="item-description">A classic red velvet cake with a modern twist of berry compote layers.</p>
+            </li>
+            <li class="menu-item">
+              <span class="item-name">Choco Indulgence</span>
+              <span class="item-price">$30</span>
+              <p class="item-description">Decadent dark chocolate cake with a rich ganache and gold leaf topping.</p>
+            </li>
+            <li class="menu-item">
+              <span class="item-name">Lemon Chiffon</span>
+              <span class="item-price">$25</span>
+              <p class="item-description">Light and fluffy lemon-infused sponge with a zesty buttercream frosting.</p>
+            </li>
+            <li class="menu-item">
+              <span class="item-name">Caramel Mirage</span>
+              <span class="item-price">$27</span>
+              <p class="item-description">Moist vanilla cake with layers of salted caramel and toasted pecans.</p>
+            </li>
+          </ul>
+        </div>
+        <!-- Pies Category -->
+        <div class="menu-category">
+          <h3>Pies</h3>
+          <ul class="menu-items">
+            <li class="menu-item">
+              <span class="item-name">Apple Crisp Fantasy</span>
+              <span class="item-price">$20</span>
+              <p class="item-description">Classic apple pie with a cinnamon crumble topping and homemade caramel.</p>
+            </li>
+            <li class="menu-item">
+              <span class="item-name">Berry Bliss</span>
+              <span class="item-price">$22</span>
+              <p class="item-description">Mixed berry pie with a flaky crust, served with clotted cream.</p>
+            </li>
+            <li class="menu-item">
+              <span class="item-name">Pumpkin Spice</span>
+              <span class="item-price">$18</span>
+              <p class="item-description">Seasonal pumpkin pie with a blend of spices and a dollop of whipped cream.</p>
+            </li>
+            <li class="menu-item">
+              <span class="item-name">Pecan Dream</span>
+              <span class="item-price">$23</span>
+              <p class="item-description">Sweet and sticky pecan pie with a touch of bourbon and dark chocolate.</p>
+            </li>
+          </ul>
+        </div>
+        <!-- Flans Category -->
+        <div class="menu-category">
+          <h3>Flans</h3>
+          <ul class="menu-items">
+            <li class="menu-item">
+              <span class="item-name">Classic Caramel</span>
+              <span class="item-price">$15</span>
+              <p class="item-description">Silky smooth traditional flan topped with a golden caramel sauce.</p>
+            </li>
+            <li class="menu-item">
+              <span class="item-name">Coconut Paradise</span>
+              <span class="item-price">$17</span>
+              <p class="item-description">Creamy coconut flan with a layer of toasted coconut flakes.</p>
+            </li>
+            <li class="menu-item">
+              <span class="item-name">Espresso Essence</span>
+              <span class="item-price">$16</span>
+              <p class="item-description">Coffee-infused flan for a delightful pick-me-up dessert.</p>
+            </li>
+            <li class="menu-item">
+              <span class="item-name">Vanilla Bean Dream</span>
+              <span class="item-price">$18</span>
+              <p class="item-description">Rich vanilla bean flan with a smooth, custard-like texture.</p>
+            </li>
+          </ul>
+        </div>
+        <script type="module" src="https://unpkg.com/@splinetool/viewer@0.9.493/build/spline-viewer.js"></script>
+        <spline-viewer url="https://prod.spline.design/K4KsIHyRM-t9Z1rE/scene.splinecode"></spline-viewer>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <script src="main.js"></script>
+</body>
+
+</html>
